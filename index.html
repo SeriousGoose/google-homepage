@@ -3,20 +3,69 @@
     <head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <style>
-            
-
+            #body{
+                font-family: 'Open Sans', sans-serif;
+            }
+           .nav-links {
+               color:black;
+               text-decoration: none;
+           } 
+           #about:hover {
+                text-decoration:underline;
+           }
+           #store:hover {
+                text-decoration:underline;
+           }
+           #gmail:hover{
+            text-decoration:underline;
+           }
+           #images:hover{
+            text-decoration:underline;
+           }
+           #apps:hover{
+            text-decoration:underline;
+           }
+           #sign-in:hover{
+            text-decoration:underline;
+           }
+           .footer-links{
+               color: grey;
+               text-decoration: none;
+           }
+           #advertising:hover{
+           text-decoration:underline;
+           }
+           #business:hover{
+            text-decoration:underline;
+           }
+           #works:hover{
+            text-decoration:underline;
+           }
+           #privacy:hover{
+            text-decoration:underline;
+           }
+           #terms:hover{
+            text-decoration:underline;
+           }
+           #settings:hover{
+            text-decoration:underline;
+           }
 
         </style>
     </head>
-    <body>
-        <nav>
-            <a id="about" href=https://web.archive.org/web/20191104021941/https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header>About</a>
-            <a id="store" href=https://web.archive.org/web/20191130234759/https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US>Store</a>
-            <a id="gmail" href=https://web.archive.org/web/20191130234759/https://mail.google.com/mail/?tab=wm&ogbl>Gmail</a>
-            <a id="images" href=https://web.archive.org/web/20191130234759/https://www.google.com/imghp?hl=en&tab=wi&ogbl>Images</a>
-            <a id="apps" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en/about/products?tab=wh>Google Apps</a>
-            <a id="sign-in" href=https://web.archive.org/web/20191130234759/https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/>Sign in</a>
+    <body id="body">
+        <nav class="nav">
+            <div class="nav-links">
+                <a class="nav-links" id="about" href=https://web.archive.org/web/20191130234759/https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header>About</a>
+                <a class="nav-links" id="store" href=https://web.archive.org/web/20191130234759/https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US>Store</a>
+                <a class="nav-links" id="gmail" href=https://web.archive.org/web/20191130234759/https://mail.google.com/mail/?tab=wm&ogbl>Gmail</a>
+                <a class="nav-links" id="images" href=https://web.archive.org/web/20191130234759/https://www.google.com/imghp?hl=en&tab=wi&ogbl>Images</a>
+                <a class="nav-links" id="apps" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en/about/products?tab=wh>Google Apps</a>
+                <button id="btn-sign-in" type="button">Sign in</button>
+            </div>
         </nav>
         <main>
             <div>
@@ -26,24 +75,26 @@
                 <div class="input-icons">
                     <span class="material-icons">search</span> 
                     <input id="input-field" type=text>
-                    <span class="material-icons">mic</span>
+                    <button class="btn"><i class="material-icons">mic</i></button>
                 </div>    
             </div>  
             <div class="button">
                 <button id="btn-search" type="button">Google Search</button>
             </div>     
             <div class="button">
-               <button id="btn-luck" type="button">I'm Feeling Lucky</button>
+               <button id="btn-lucky" type="button">I'm Feeling Lucky</button>
             </div>
 
         </main>
-        <footer>
-            <a id="advertising" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1>Advertising</a>
-            <a id="business" href=https://web.archive.org/web/20191130234759/https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1>Business</a>
-            <a id="works" href=https://web.archive.org/web/20191130234759/https://google.com/search/howsearchworks/?fg=1>How Search works</a>
-            <a id="privacy" href=https://web.archive.org/web/20191130234759/https://policies.google.com/privacy?fg=1>Privacy</a>
-            <a id="terms" href=https://web.archive.org/web/20191130234759/https://policies.google.com/terms?fg=1>Terms</a>
-            <a id="settings" href=https://web.archive.org/web/20191130234759/https://www.google.com/preferences?hl=en>Settings</a>
+        <footer class="footer">
+            <div class="footer-links">
+                <a class="footer-links" id="advertising" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1>Advertising</a>
+                <a class="footer-links" id="business" href=https://web.archive.org/web/20191130234759/https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1>Business</a>
+                <a class="footer-links" id="works" href=https://web.archive.org/web/20191130234759/https://google.com/search/howsearchworks/?fg=1>How Search works</a>
+                <a class="footer-links" id="privacy" href=https://web.archive.org/web/20191130234759/https://policies.google.com/privacy?fg=1>Privacy</a>
+                <a class="footer-links" id="terms" href=https://web.archive.org/web/20191130234759/https://policies.google.com/terms?fg=1>Terms</a>
+                <a class="footer-links" id="settings" href=https://web.archive.org/web/20191130234759/https://www.google.com/preferences?hl=en>Settings</a>
+            </div>    
         </footer>
     </body>
 </html>
