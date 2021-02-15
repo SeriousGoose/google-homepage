@@ -8,13 +8,112 @@
         <style>
             #body{
                 font-family: 'Open Sans', sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content:center;
+                overflow:auto;
+                font-size:13px;
             }
            .nav-links {
                color:black;
                text-decoration: none;
+               opacity:70%;
            } 
+           #apps{
+               opacity:70%;
+           }
+           #apps:hover{
+               opacity:100%;
+           }
+           #nav-left {
+               position:absolute;
+               left: 2%;
+           }
+           #nav-right{
+               position:absolute;
+               right:2%;
+           }
+           #btn-sign-in{
+               background-color:#4285f4;
+               color: white;
+               padding:8px;
+               border:none;
+           }
+           #main{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+           }
+           #search{
+               opacity:40%;
+           }
+           #input-field{
+               padding-left: 50px;
+               padding-right:50px;
+               padding-top: 25px; 
+           }
+           .input-icons {
+               display:flex;
+               justify-content: center;
+               align-content:center;
+           }
+           #btn{
+               background:none;
+               border:none;
+           }
+           .mic-button {
+                position:relative;
+            }
+            .mic-button .mic-tooltip {
+                display: none;
+                position: absolute;
+                bottom: 5%;
+                left: 5%;
+                right: 5%;
+                background-color:black;
+                color:white;
+                width:100px;
+                offset
+            }
+            .mic-button:hover .mic-tooltip {
+                display:inline-flex;
+            }
+            #mic{
+                border:none;
+                background-color:white;
+            }
+            .button{
+                border:none;
+                padding:10px;
+                color:#5f6368;
+                
+            }
+           #footer-left{
+               position:absolute;
+               bottom:2%;
+               left:2%;
+               
+           }
+           #footer-right{
+               position:absolute;
+               bottom:2%;
+               right:2%;
+           }
+           #footer{
+           height:30px;
+           width: 100%;
+           background-color:#f2f2f2;
+           border-top: 1px solid #e4e4e4;
+           position:absolute;
+           bottom:0%;
+           
+           }
            #about:hover {
                 text-decoration:underline;
+                
            }
            #store:hover {
                 text-decoration:underline;
@@ -25,15 +124,12 @@
            #images:hover{
             text-decoration:underline;
            }
-           #apps:hover{
-            text-decoration:underline;
-           }
            #sign-in:hover{
             text-decoration:underline;
            }
            .footer-links{
-               color: grey;
-               text-decoration: none;
+               color:#5f6368;
+               text-decoration: none;               
            }
            #advertising:hover{
            text-decoration:underline;
@@ -53,47 +149,58 @@
            #settings:hover{
             text-decoration:underline;
            }
-
         </style>
     </head>
     <body id="body">
-        <nav class="nav">
-            <div class="nav-links">
-                <a class="nav-links" id="about" href=https://web.archive.org/web/20191130234759/https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header>About</a>
-                <a class="nav-links" id="store" href=https://web.archive.org/web/20191130234759/https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US>Store</a>
-                <a class="nav-links" id="gmail" href=https://web.archive.org/web/20191130234759/https://mail.google.com/mail/?tab=wm&ogbl>Gmail</a>
-                <a class="nav-links" id="images" href=https://web.archive.org/web/20191130234759/https://www.google.com/imghp?hl=en&tab=wi&ogbl>Images</a>
-                <a class="nav-links" id="apps" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en/about/products?tab=wh>Google Apps</a>
-                <button id="btn-sign-in" type="button">Sign in</button>
+        <nav id="nav">
+            <div id="nav-links">
+                <div id="nav-left">
+                    <a class="nav-links" id="about" href=https://web.archive.org/web/20191130234759/https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header>About</a>
+                    <a class="nav-links" id="store" href=https://web.archive.org/web/20191130234759/https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US>Store</a>
+                </div>
+                <div id="nav-right">
+                    <a class="nav-links" id="gmail" href=https://web.archive.org/web/20191130234759/https://mail.google.com/mail/?tab=wm&ogbl>Gmail</a>
+                    <a class="nav-links" id="images" href=https://web.archive.org/web/20191130234759/https://www.google.com/imghp?hl=en&tab=wi&ogbl>Images</a>
+                    <a class="nav-links" id="apps" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en/about/products?tab=wh><span id="apps" class="material-icons">apps</span></a>
+                    <button id="btn-sign-in" type="button"><strong>Sign in</strong></button>
+                </div>
             </div>
         </nav>
-        <main>
+        <main id="main">
             <div>
                 <img id="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png>
             </div>
             <div >
                 <div class="input-icons">
-                    <span class="material-icons">search</span> 
-                    <input id="input-field" type=text>
-                    <button class="btn"><i class="material-icons">mic</i></button>
+                    <span id="search" class="material-icons">search</span> 
+                    <input id="input-field" type="search">
+                        <div class="mic-button">
+                            <button id="mic"><i class="material-icons">mic</i></button>
+                            <div class="mic-tooltip">
+                                <p>Search by voice</p>
+                            </div>
+                        </div>
                 </div>    
-            </div>  
+            </div> 
+            <br> 
             <div class="button">
-                <button id="btn-search" type="button">Google Search</button>
-            </div>     
-            <div class="button">
-               <button id="btn-lucky" type="button">I'm Feeling Lucky</button>
+                <button class="button" id="btn-search" type="button">Google Search</button>
+               <button class="button" id="btn-lucky" type="button">I'm Feeling Lucky</button>
             </div>
 
         </main>
-        <footer class="footer">
-            <div class="footer-links">
-                <a class="footer-links" id="advertising" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1>Advertising</a>
-                <a class="footer-links" id="business" href=https://web.archive.org/web/20191130234759/https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1>Business</a>
-                <a class="footer-links" id="works" href=https://web.archive.org/web/20191130234759/https://google.com/search/howsearchworks/?fg=1>How Search works</a>
-                <a class="footer-links" id="privacy" href=https://web.archive.org/web/20191130234759/https://policies.google.com/privacy?fg=1>Privacy</a>
-                <a class="footer-links" id="terms" href=https://web.archive.org/web/20191130234759/https://policies.google.com/terms?fg=1>Terms</a>
-                <a class="footer-links" id="settings" href=https://web.archive.org/web/20191130234759/https://www.google.com/preferences?hl=en>Settings</a>
+        <footer id="footer">
+            <div id="footer-links">
+                <div id="footer-left">
+                    <a class="footer-links" id="advertising" href=https://web.archive.org/web/20191130234759/https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1>Advertising</a>
+                    <a class="footer-links" id="business" href=https://web.archive.org/web/20191130234759/https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1>Business</a>
+                    <a class="footer-links" id="works" href=https://web.archive.org/web/20191130234759/https://google.com/search/howsearchworks/?fg=1>How Search works</a>
+                </div>
+                <div id="footer-right">
+                    <a class="footer-links" id="privacy" href=https://web.archive.org/web/20191130234759/https://policies.google.com/privacy?fg=1>Privacy</a>
+                    <a class="footer-links" id="terms" href=https://web.archive.org/web/20191130234759/https://policies.google.com/terms?fg=1>Terms</a>
+                    <a class="footer-links" id="settings" href=https://web.archive.org/web/20191130234759/https://www.google.com/preferences?hl=en>Settings</a>
+                </div>
             </div>    
         </footer>
     </body>
